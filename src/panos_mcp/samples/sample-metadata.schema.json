@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mlebreuil/panos-mcp/samples/sample-metadata.schema.json",
+  "title": "Panorama XML API sample metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "request", "panos_version", "description", "provenance", "sanitization", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(any|[0-9]+\\.[0-9]+)/(op|config|log)/[a-z0-9-]+/[a-z0-9-]+$",
+      "description": "<panos-version>/<api-type>/<command-slug>/<variant>; must equal the file path under samples/"
+    },
+    "request": { "$ref": "#/$defs/request" },
+    "panos_version": { "type": "string", "pattern": "^(any|[0-9]+\\.[0-9]+(\\.[0-9]+)?)$" },
+    "description": { "type": "string", "minLength": 10 },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source"],
+      "properties": {
+        "source": { "enum": ["documentation", "synthetic", "lab-capture"] },
+        "url": { "type": "string", "format": "uri" },
+        "captured_at": { "type": "string", "format": "date-time" },
+        "generator": { "type": "string", "description": "Script + seed for generated synthetic samples" },
+        "notes": { "type": "string" }
+      },
+      "allOf": [
+        { "if": { "properties": { "source": { "const": "documentation" } } }, "then": { "required": ["url"] } },
+        { "if": { "properties": { "source": { "const": "lab-capture" } } }, "then": { "required": ["captured_at"] } }
+      ]
+    },
+    "sanitization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tool_version", "sanitized_at", "leak_check"],
+      "properties": {
+        "tool_version": { "type": "string" },
+        "sanitized_at": { "type": "string", "format": "date-time" },
+        "leak_check": { "const": "passed" }
+      }
+    },
+    "status": { "enum": ["unverified", "verified"] },
+    "tags": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "uniqueItems": true }
+  },
+  "$defs": {
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["op", "config", "log"] },
+        "cmd": { "type": "string", "description": "Normalized op command XML (no whitespace between elements)" },
+        "action": { "enum": ["get", "show"] },
+        "xpath": { "type": "string", "pattern": "^/config/" },
+        "log_type": { "enum": ["traffic", "threat", "url", "system", "config"] },
+        "log_phase": { "enum": ["start", "result"] },
+        "query": { "type": "string" },
+        "target": { "type": "string", "pattern": "^9[0-9]{7,19}$", "description": "Forged firewall serial" }
+      },
+      "allOf": [
+        { "if": { "properties": { "type": { "const": "op" } } }, "then": { "required": ["cmd"] } },
+        { "if": { "properties": { "type": { "const": "config" } } }, "then": { "required": ["action", "xpath"] } },
+        { "if": { "properties": { "type": { "const": "log" } } }, "then": { "required": ["log_type", "log_phase"] } }
+      ]
+    }
+  }
+}

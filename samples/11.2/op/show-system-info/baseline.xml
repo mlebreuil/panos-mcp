@@ -1,0 +1,25 @@
+<response status="success">
+  <result>
+    <system>
+      <hostname>panorama-lab-01</hostname>
+      <ip-address>10.0.0.5</ip-address>
+      <netmask>255.255.255.0</netmask>
+      <default-gateway>10.0.0.1</default-gateway>
+      <mac-address>00:00:5e:00:53:10</mac-address>
+      <time>Fri Oct 16 09:00:00 2026</time>
+      <uptime>42 days, 3:12:09</uptime>
+      <devicename>panorama-lab-01</devicename>
+      <family>pc</family>
+      <model>Panorama</model>
+      <serial>900000000100</serial>
+      <sw-version>11.2.3</sw-version>
+      <app-version>8912-9301</app-version>
+      <av-version>5012-5530</av-version>
+      <wildfire-version>905123-909001</wildfire-version>
+      <threat-version>8912-9301</threat-version>
+      <url-filtering-version>20261016.20001</url-filtering-version>
+      <system-mode>panorama</system-mode>
+      <operational-mode>normal</operational-mode>
+    </system>
+  </result>
+</response>

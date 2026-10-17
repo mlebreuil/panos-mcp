@@ -1,0 +1,22 @@
+<response status="success">
+  <result>
+    <templates>
+      <entry name="T-Base">
+        <description>Shared base settings</description>
+        <devices />
+      </entry>
+      <entry name="T-Region-A">
+        <description>Region A interfaces</description>
+        <devices />
+      </entry>
+      <entry name="T-Branch">
+        <description>Branch interfaces</description>
+        <devices />
+      </entry>
+      <entry name="T-Region-B">
+        <description>Region B data center</description>
+        <devices />
+      </entry>
+    </templates>
+  </result>
+</response>

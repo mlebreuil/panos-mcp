@@ -1,0 +1,20 @@
+{
+  "id": "11.1/op/show-jobs-id/push-ok",
+  "request": {
+    "type": "op",
+    "cmd": "<show><jobs><id>106</id></jobs></show>"
+  },
+  "panos_version": "11.1",
+  "description": "Successful push to two firewalls with per-device results",
+  "provenance": {
+    "source": "synthetic",
+    "url": "https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/explore-the-api",
+    "notes": "Hand-authored response following the request/response structure described in the PAN-OS and Panorama XML API guide (provenance.url); not a verbatim copy. Unverified against a live Panorama."
+  },
+  "sanitization": {
+    "tool_version": "panos-mcp 0.1.0",
+    "sanitized_at": "2026-10-17T07:51:48Z",
+    "leak_check": "passed"
+  },
+  "status": "unverified"
+}

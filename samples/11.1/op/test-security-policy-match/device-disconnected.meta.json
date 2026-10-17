@@ -1,0 +1,21 @@
+{
+  "id": "11.1/op/test-security-policy-match/device-disconnected",
+  "request": {
+    "type": "op",
+    "cmd": "<test><security-policy-match><from>trust</from><to>dmz</to><source>10.10.1.5</source><destination>10.20.1.10</destination><protocol>6</protocol><destination-port>443</destination-port><application>ssl</application></security-policy-match></test>",
+    "target": "900000000003"
+  },
+  "panos_version": "11.1",
+  "description": "Error when the target firewall is disconnected",
+  "provenance": {
+    "source": "synthetic",
+    "url": "https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-panorama-api/pan-os-xml-api-use-cases/query-a-firewall-from-panorama-api",
+    "notes": "Hand-authored response following the request/response structure described in the PAN-OS and Panorama XML API guide (provenance.url); not a verbatim copy. Unverified against a live Panorama. Exact error wording is unverified."
+  },
+  "sanitization": {
+    "tool_version": "panos-mcp 0.1.0",
+    "sanitized_at": "2026-10-17T08:26:22Z",
+    "leak_check": "passed"
+  },
+  "status": "unverified"
+}

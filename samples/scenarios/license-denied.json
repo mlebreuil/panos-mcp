@@ -1,0 +1,15 @@
+{
+  "name": "license-denied",
+  "description": "Baseline, but the admin role may not read license information.",
+  "panos_version": "11.1",
+  "extends": "baseline",
+  "responses": [
+    {
+      "request": {
+        "type": "op",
+        "cmd": "<request><license><info></info></license></request>"
+      },
+      "sample": "any/op/error-403/role-denied"
+    }
+  ]
+}

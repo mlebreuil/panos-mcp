@@ -1,0 +1,21 @@
+{
+  "id": "11.2/log/system-result/baseline",
+  "request": {
+    "type": "log",
+    "log_type": "system",
+    "log_phase": "result"
+  },
+  "panos_version": "11.2",
+  "description": "3 system log entries, newest first",
+  "provenance": {
+    "source": "synthetic",
+    "url": "https://docs.paloaltonetworks.com/pan-os/9-1/pan-os-panorama-api/pan-os-xml-api-request-types/retrieve-logs-api",
+    "notes": "Hand-authored response following the request/response structure described in the PAN-OS and Panorama XML API guide (provenance.url); not a verbatim copy. Unverified against a live Panorama. Identical in structure to the 11.1 sample per documentation (11.1 & later guide)."
+  },
+  "sanitization": {
+    "tool_version": "panos-mcp 0.1.0",
+    "sanitized_at": "2026-10-17T08:26:22Z",
+    "leak_check": "passed"
+  },
+  "status": "unverified"
+}

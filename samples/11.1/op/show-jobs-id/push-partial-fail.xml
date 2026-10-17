@@ -1,0 +1,72 @@
+<response status="success">
+  <result>
+    <job>
+      <tenq>2026/10/16 08:10:00</tenq>
+      <tdeq>08:10:00</tdeq>
+      <id>102</id>
+      <user>admin</user>
+      <type>CommitAll</type>
+      <status>FIN</status>
+      <queued>NO</queued>
+      <stoppable>no</stoppable>
+      <result>FAIL</result>
+      <tfin>2026/10/16 08:10:59</tfin>
+      <description>Push all</description>
+      <positionInQ>0</positionInQ>
+      <progress>100</progress>
+      <details>
+        <line>Push to 1 of 3 devices failed</line>
+      </details>
+      <warnings />
+      <devices>
+        <entry>
+          <serial-no>900000000001</serial-no>
+          <devicename>fw-hq-01</devicename>
+          <vsys>vsys1</vsys>
+          <status>FIN</status>
+          <result>OK</result>
+          <progress>100</progress>
+          <tfin>2026/10/16 08:42:10</tfin>
+          <details>
+            <msg>
+              <warnings />
+              <errors />
+            </msg>
+          </details>
+        </entry>
+        <entry>
+          <serial-no>900000000002</serial-no>
+          <devicename>fw-hq-02</devicename>
+          <vsys>vsys1</vsys>
+          <status>FIN</status>
+          <result>OK</result>
+          <progress>100</progress>
+          <tfin>2026/10/16 08:42:10</tfin>
+          <details>
+            <msg>
+              <warnings />
+              <errors />
+            </msg>
+          </details>
+        </entry>
+        <entry>
+          <serial-no>900000000003</serial-no>
+          <devicename>fw-branch-01</devicename>
+          <vsys>vsys1</vsys>
+          <status>FIN</status>
+          <result>FAIL</result>
+          <progress>100</progress>
+          <tfin>2026/10/16 08:42:10</tfin>
+          <details>
+            <msg>
+              <warnings />
+              <errors>
+                <line>Validation Error: rule 'Allow-Web-Out' references unknown address 'web-old'</line>
+              </errors>
+            </msg>
+          </details>
+        </entry>
+      </devices>
+    </job>
+  </result>
+</response>

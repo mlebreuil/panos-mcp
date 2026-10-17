@@ -1,0 +1,12 @@
+<response status="success">
+  <result>
+    <dg-hierarchy>
+      <dg name="Global-DG" dg_id="11">
+        <dg name="Region-A-DG" dg_id="12">
+          <dg name="Branch-DG" dg_id="14" />
+        </dg>
+        <dg name="Region-B-DG" dg_id="13" />
+      </dg>
+    </dg-hierarchy>
+  </result>
+</response>

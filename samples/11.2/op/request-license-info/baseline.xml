@@ -1,0 +1,33 @@
+<response status="success">
+  <result>
+    <licenses>
+      <entry>
+        <feature>Device Management License</feature>
+        <description>Manage up to 25 devices</description>
+        <serial>900000000100</serial>
+        <issued>January 01, 2026</issued>
+        <expires>December 31, 2027</expires>
+        <expired>no</expired>
+        <authcode>I0000001</authcode>
+      </entry>
+      <entry>
+        <feature>Premium Support</feature>
+        <description>24x7 phone support</description>
+        <serial>900000000100</serial>
+        <issued>October 01, 2025</issued>
+        <expires>September 30, 2026</expires>
+        <expired>yes</expired>
+        <authcode>I0000002</authcode>
+      </entry>
+      <entry>
+        <feature>Logging Service</feature>
+        <description>Panorama log collection</description>
+        <serial>900000000100</serial>
+        <issued>January 01, 2026</issued>
+        <expires>Never</expires>
+        <expired>no</expired>
+        <authcode>I0000003</authcode>
+      </entry>
+    </licenses>
+  </result>
+</response>

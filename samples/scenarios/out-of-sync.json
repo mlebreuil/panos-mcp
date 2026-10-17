@@ -1,0 +1,15 @@
+{
+  "name": "out-of-sync",
+  "description": "Baseline with fw-hq-02 and fw-dc-01 out of sync with Panorama.",
+  "panos_version": "11.1",
+  "extends": "baseline",
+  "responses": [
+    {
+      "request": {
+        "type": "op",
+        "cmd": "<show><devices><all></all></devices></show>"
+      },
+      "sample": "11.1/op/show-devices-all/out-of-sync"
+    }
+  ]
+}

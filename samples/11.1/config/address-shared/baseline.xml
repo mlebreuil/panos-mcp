@@ -1,0 +1,46 @@
+<response status="success">
+  <result>
+    <address>
+      <entry name="dns-server-1">
+        <ip-netmask>10.1.1.53/32</ip-netmask>
+        <tag>
+          <member>infra</member>
+        </tag>
+        <description>Primary DNS</description>
+      </entry>
+      <entry name="ntp-pool">
+        <fqdn>ntp.example.com</fqdn>
+      </entry>
+      <entry name="partner-range">
+        <ip-range>198.51.100.10-198.51.100.20</ip-range>
+        <description>Partner NAT range</description>
+      </entry>
+      <entry name="mgmt-wildcard">
+        <ip-wildcard>10.0.0.0/0.255.0.255</ip-wildcard>
+      </entry>
+      <entry name="web-srv-01">
+        <ip-netmask>10.20.1.10/32</ip-netmask>
+        <tag>
+          <member>web</member>
+          <member>prod</member>
+        </tag>
+      </entry>
+      <entry name="web-srv-02">
+        <ip-netmask>10.20.1.11/32</ip-netmask>
+        <tag>
+          <member>web</member>
+          <member>prod</member>
+        </tag>
+      </entry>
+      <entry name="db-srv-01">
+        <ip-netmask>10.20.2.10/32</ip-netmask>
+        <tag>
+          <member>prod</member>
+        </tag>
+      </entry>
+      <entry name="corp-net">
+        <ip-netmask>10.0.0.0/8</ip-netmask>
+      </entry>
+    </address>
+  </result>
+</response>

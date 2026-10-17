@@ -1,0 +1,31 @@
+{
+  "name": "candidate-differs",
+  "description": "Baseline, but the candidate config has an uncommitted Branch-DG rule and a changed shared address (db-srv-01).",
+  "panos_version": "11.1",
+  "extends": "baseline",
+  "responses": [
+    {
+      "request": {
+        "type": "config",
+        "action": "get",
+        "xpath": "/config/devices/entry[@name='localhost.localdomain']/device-group/entry[@name='Branch-DG']/pre-rulebase/security/rules"
+      },
+      "sample": "11.1/config/security-rules-branch-dg-pre/candidate"
+    },
+    {
+      "request": {
+        "type": "config",
+        "action": "get",
+        "xpath": "/config/shared/address"
+      },
+      "sample": "11.1/config/address-shared/candidate"
+    },
+    {
+      "request": {
+        "type": "op",
+        "cmd": "<check><pending-changes></pending-changes></check>"
+      },
+      "sample": "11.1/op/check-pending-changes/pending"
+    }
+  ]
+}

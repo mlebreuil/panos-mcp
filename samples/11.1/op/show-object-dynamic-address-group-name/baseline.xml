@@ -1,0 +1,16 @@
+<response status="success">
+  <result>
+    <dyn-addr-grp>
+      <entry>
+        <vsys>vsys1</vsys>
+        <group-name>dyn-web</group-name>
+        <filter>'web' and 'prod'</filter>
+        <member-list>
+          <entry name="10.20.1.10" type="registered-ip" />
+          <entry name="10.20.1.11" type="registered-ip" />
+          <entry name="10.20.1.12" type="registered-ip" />
+        </member-list>
+      </entry>
+    </dyn-addr-grp>
+  </result>
+</response>

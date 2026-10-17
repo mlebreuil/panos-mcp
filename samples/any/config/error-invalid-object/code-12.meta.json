@@ -1,0 +1,24 @@
+{
+  "id": "any/config/error-invalid-object/code-12",
+  "request": {
+    "type": "config",
+    "action": "get",
+    "xpath": "/config/shared/address"
+  },
+  "panos_version": "any",
+  "description": "Error code 12: invalid object in the request",
+  "provenance": {
+    "source": "synthetic",
+    "url": "https://docs.paloaltonetworks.com/pan-os/10-0/pan-os-panorama-api/get-started-with-the-pan-os-xml-api/pan-os-xml-api-error-codes",
+    "notes": "Hand-authored response following the request/response structure described in the PAN-OS and Panorama XML API guide (provenance.url); not a verbatim copy. Unverified against a live Panorama."
+  },
+  "sanitization": {
+    "tool_version": "panos-mcp 0.1.0",
+    "sanitized_at": "2026-10-17T07:51:48Z",
+    "leak_check": "passed"
+  },
+  "status": "unverified",
+  "tags": [
+    "error"
+  ]
+}

@@ -1,0 +1,53 @@
+<response status="success">
+  <result>
+    <rules>
+      <entry name="SNAT-Outbound">
+        <from>
+          <member>trust</member>
+        </from>
+        <to>
+          <member>untrust</member>
+        </to>
+        <source>
+          <member>corp-net</member>
+        </source>
+        <destination>
+          <member>any</member>
+        </destination>
+        <service>any</service>
+        <to-interface>ethernet1/1</to-interface>
+        <source-translation>
+          <dynamic-ip-and-port>
+            <interface-address>
+              <interface>ethernet1/1</interface>
+            </interface-address>
+          </dynamic-ip-and-port>
+        </source-translation>
+        <nat-type>ipv4</nat-type>
+        <description>Hide corp behind the egress interface</description>
+      </entry>
+      <entry name="Static-Web-01">
+        <from>
+          <member>dmz</member>
+        </from>
+        <to>
+          <member>untrust</member>
+        </to>
+        <source>
+          <member>web-srv-01</member>
+        </source>
+        <destination>
+          <member>any</member>
+        </destination>
+        <service>any</service>
+        <source-translation>
+          <static-ip>
+            <translated-address>203.0.113.10</translated-address>
+            <bi-directional>yes</bi-directional>
+          </static-ip>
+        </source-translation>
+        <nat-type>ipv4</nat-type>
+      </entry>
+    </rules>
+  </result>
+</response>

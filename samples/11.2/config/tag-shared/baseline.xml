@@ -1,0 +1,17 @@
+<response status="success">
+  <result>
+    <tag>
+      <entry name="infra">
+        <color>color1</color>
+        <comments>Infrastructure</comments>
+      </entry>
+      <entry name="web">
+        <color>color3</color>
+      </entry>
+      <entry name="prod">
+        <color>color5</color>
+        <comments>Production</comments>
+      </entry>
+    </tag>
+  </result>
+</response>

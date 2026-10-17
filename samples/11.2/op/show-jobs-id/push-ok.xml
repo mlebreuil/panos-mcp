@@ -1,0 +1,53 @@
+<response status="success">
+  <result>
+    <job>
+      <tenq>2026/10/16 08:40:01</tenq>
+      <tdeq>08:40:01</tdeq>
+      <id>106</id>
+      <user>admin</user>
+      <type>CommitAll</type>
+      <status>FIN</status>
+      <queued>NO</queued>
+      <stoppable>no</stoppable>
+      <result>OK</result>
+      <tfin>2026/10/16 08:40:59</tfin>
+      <description>Push Region-A</description>
+      <positionInQ>0</positionInQ>
+      <progress>100</progress>
+      <details />
+      <warnings />
+      <devices>
+        <entry>
+          <serial-no>900000000001</serial-no>
+          <devicename>fw-hq-01</devicename>
+          <vsys>vsys1</vsys>
+          <status>FIN</status>
+          <result>OK</result>
+          <progress>100</progress>
+          <tfin>2026/10/16 08:42:10</tfin>
+          <details>
+            <msg>
+              <warnings />
+              <errors />
+            </msg>
+          </details>
+        </entry>
+        <entry>
+          <serial-no>900000000002</serial-no>
+          <devicename>fw-hq-02</devicename>
+          <vsys>vsys1</vsys>
+          <status>FIN</status>
+          <result>OK</result>
+          <progress>100</progress>
+          <tfin>2026/10/16 08:42:10</tfin>
+          <details>
+            <msg>
+              <warnings />
+              <errors />
+            </msg>
+          </details>
+        </entry>
+      </devices>
+    </job>
+  </result>
+</response>

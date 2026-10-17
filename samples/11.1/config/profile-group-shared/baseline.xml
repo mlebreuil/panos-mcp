@@ -1,0 +1,20 @@
+<response status="success">
+  <result>
+    <profile-group>
+      <entry name="strict-profiles">
+        <virus>
+          <member>default</member>
+        </virus>
+        <spyware>
+          <member>strict</member>
+        </spyware>
+        <vulnerability>
+          <member>strict</member>
+        </vulnerability>
+        <url-filtering>
+          <member>default</member>
+        </url-filtering>
+      </entry>
+    </profile-group>
+  </result>
+</response>

@@ -1,0 +1,87 @@
+<response status="success">
+  <result>
+    <job>
+      <tenq>09:00:00</tenq>
+      <tdeq>09:00:00</tdeq>
+      <tlast>09:00:01</tlast>
+      <status>FIN</status>
+      <id>1</id>
+    </job>
+    <log>
+      <logs count="3" progress="100">
+        <entry logid="7200000011">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:45:10</receive_time>
+          <serial>900000000001</serial>
+          <seqno>7011</seqno>
+          <time_generated>2026/10/16 08:45:10</time_generated>
+          <device_name>fw-hq-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>THREAT</type>
+          <subtype>virus</subtype>
+          <src>192.0.2.77</src>
+          <dst>10.20.1.10</dst>
+          <rule>Allow-Web-In</rule>
+          <app>web-browsing</app>
+          <from>untrust</from>
+          <to>dmz</to>
+          <sport>40112</sport>
+          <dport>80</dport>
+          <proto>tcp</proto>
+          <action>reset-both</action>
+          <threatid>Eicar Test File(39040)</threatid>
+          <severity>medium</severity>
+          <direction>client-to-server</direction>
+        </entry>
+        <entry logid="7200000012">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:40:02</receive_time>
+          <serial>900000000004</serial>
+          <seqno>7012</seqno>
+          <time_generated>2026/10/16 08:40:02</time_generated>
+          <device_name>fw-dc-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>THREAT</type>
+          <subtype>vulnerability</subtype>
+          <src>203.0.113.9</src>
+          <dst>10.20.1.11</dst>
+          <rule>Allow-Web-In</rule>
+          <app>ssl</app>
+          <from>untrust</from>
+          <to>dmz</to>
+          <sport>50001</sport>
+          <dport>443</dport>
+          <proto>tcp</proto>
+          <action>drop</action>
+          <threatid>Generic Path Traversal(30844)</threatid>
+          <severity>high</severity>
+          <direction>client-to-server</direction>
+        </entry>
+        <entry logid="7200000013">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:31:00</receive_time>
+          <serial>900000000003</serial>
+          <seqno>7013</seqno>
+          <time_generated>2026/10/16 08:31:00</time_generated>
+          <device_name>fw-branch-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>THREAT</type>
+          <subtype>spyware</subtype>
+          <src>10.30.2.15</src>
+          <dst>198.51.100.99</dst>
+          <rule>Allow-Branch-Web</rule>
+          <app>web-browsing</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <sport>51515</sport>
+          <dport>80</dport>
+          <proto>tcp</proto>
+          <action>alert</action>
+          <threatid>Suspicious DNS Query(109001001)</threatid>
+          <severity>informational</severity>
+          <direction>server-to-client</direction>
+        </entry>
+      </logs>
+    </log>
+  </result>
+</response>

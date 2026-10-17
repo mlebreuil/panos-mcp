@@ -1,0 +1,22 @@
+<response status="success">
+  <result>
+    <rules>
+      <entry name="Branch-No-NAT-VPN">
+        <from>
+          <member>trust</member>
+        </from>
+        <to>
+          <member>untrust</member>
+        </to>
+        <source>
+          <member>10.30.0.0/16</member>
+        </source>
+        <destination>
+          <member>corp-net</member>
+        </destination>
+        <service>any</service>
+        <nat-type>ipv4</nat-type>
+      </entry>
+    </rules>
+  </result>
+</response>

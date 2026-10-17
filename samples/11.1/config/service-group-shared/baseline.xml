@@ -1,0 +1,13 @@
+<response status="success">
+  <result>
+    <service-group>
+      <entry name="web-svcs">
+        <members>
+          <member>service-http</member>
+          <member>service-https</member>
+          <member>svc-tcp-8443</member>
+        </members>
+      </entry>
+    </service-group>
+  </result>
+</response>
