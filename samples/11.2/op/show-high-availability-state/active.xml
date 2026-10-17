@@ -1,0 +1,15 @@
+<response status="success">
+  <result>
+    <enabled>yes</enabled>
+    <local-info>
+      <state>primary-active</state>
+      <priority>primary</priority>
+      <mgmt-ip>10.0.0.5/24</mgmt-ip>
+    </local-info>
+    <peer-info>
+      <state>secondary-passive</state>
+      <conn-status>up</conn-status>
+      <mgmt-ip>10.0.0.6</mgmt-ip>
+    </peer-info>
+  </result>
+</response>

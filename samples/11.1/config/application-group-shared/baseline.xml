@@ -1,0 +1,12 @@
+<response status="success">
+  <result>
+    <application-group>
+      <entry name="web-apps">
+        <members>
+          <member>web-browsing</member>
+          <member>ssl</member>
+        </members>
+      </entry>
+    </application-group>
+  </result>
+</response>

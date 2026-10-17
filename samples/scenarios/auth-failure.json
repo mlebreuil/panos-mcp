@@ -1,0 +1,6 @@
+{
+  "name": "auth-failure",
+  "description": "Every request fails with 403 invalid credentials (bad or expired API key).",
+  "panos_version": "any",
+  "default_response": "any/op/error-403/invalid-key"
+}

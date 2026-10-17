@@ -1,0 +1,5 @@
+<response status="error" code="403">
+  <result>
+    <msg>Unauthorized request. The admin role does not allow this request type.</msg>
+  </result>
+</response>

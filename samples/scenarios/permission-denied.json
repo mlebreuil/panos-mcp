@@ -1,0 +1,6 @@
+{
+  "name": "permission-denied",
+  "description": "Every request fails with 403: the admin role may log in but has no XML API read rights.",
+  "panos_version": "any",
+  "default_response": "any/op/error-403/role-denied"
+}

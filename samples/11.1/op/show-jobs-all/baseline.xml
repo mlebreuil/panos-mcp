@@ -1,0 +1,112 @@
+<response status="success">
+  <result>
+    <job>
+      <tenq>2026/10/16 08:40:01</tenq>
+      <tdeq>08:40:01</tdeq>
+      <id>106</id>
+      <user>admin</user>
+      <type>CommitAll</type>
+      <status>FIN</status>
+      <queued>NO</queued>
+      <stoppable>no</stoppable>
+      <result>OK</result>
+      <tfin>2026/10/16 08:40:59</tfin>
+      <description>Push Region-A</description>
+      <positionInQ>0</positionInQ>
+      <progress>100</progress>
+      <details />
+      <warnings />
+    </job>
+    <job>
+      <tenq>2026/10/16 08:35:00</tenq>
+      <tdeq>08:35:00</tdeq>
+      <id>105</id>
+      <user>admin</user>
+      <type>Commit</type>
+      <status>PEND</status>
+      <queued>NO</queued>
+      <stoppable>no</stoppable>
+      <result>PEND</result>
+      <tfin />
+      <description>Queued change</description>
+      <positionInQ>0</positionInQ>
+      <progress>0</progress>
+      <details />
+      <warnings />
+    </job>
+    <job>
+      <tenq>2026/10/16 08:30:00</tenq>
+      <tdeq>08:30:00</tdeq>
+      <id>104</id>
+      <user>admin</user>
+      <type>CommitAll</type>
+      <status>ACT</status>
+      <queued>NO</queued>
+      <stoppable>no</stoppable>
+      <result>PEND</result>
+      <tfin />
+      <description>Push Region-B</description>
+      <positionInQ>0</positionInQ>
+      <progress>45</progress>
+      <details />
+      <warnings />
+    </job>
+    <job>
+      <tenq>2026/10/16 08:20:00</tenq>
+      <tdeq>08:20:00</tdeq>
+      <id>103</id>
+      <user>system</user>
+      <type>Content</type>
+      <status>FIN</status>
+      <queued>NO</queued>
+      <stoppable>no</stoppable>
+      <result>OK</result>
+      <tfin>2026/10/16 08:20:59</tfin>
+      <description />
+      <positionInQ>0</positionInQ>
+      <progress>100</progress>
+      <details>
+        <line>Content 8912-9301 installed</line>
+      </details>
+      <warnings />
+    </job>
+    <job>
+      <tenq>2026/10/16 08:10:00</tenq>
+      <tdeq>08:10:00</tdeq>
+      <id>102</id>
+      <user>admin</user>
+      <type>CommitAll</type>
+      <status>FIN</status>
+      <queued>NO</queued>
+      <stoppable>no</stoppable>
+      <result>FAIL</result>
+      <tfin>2026/10/16 08:10:59</tfin>
+      <description>Push all</description>
+      <positionInQ>0</positionInQ>
+      <progress>100</progress>
+      <details>
+        <line>Push to 1 of 3 devices failed</line>
+      </details>
+      <warnings />
+    </job>
+    <job>
+      <tenq>2026/10/16 08:00:01</tenq>
+      <tdeq>08:00:01</tdeq>
+      <id>101</id>
+      <user>admin</user>
+      <type>Commit</type>
+      <status>FIN</status>
+      <queued>NO</queued>
+      <stoppable>no</stoppable>
+      <result>OK</result>
+      <tfin>2026/10/16 08:00:59</tfin>
+      <description>Daily change</description>
+      <positionInQ>0</positionInQ>
+      <progress>100</progress>
+      <details>
+        <line>Configuration committed successfully</line>
+      </details>
+      <warnings />
+    </job>
+  </result>
+</response>

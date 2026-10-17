@@ -1,0 +1,36 @@
+<response status="success">
+  <result>
+    <rules>
+      <entry name="Log-And-Deny-All" uuid="94562601-0000-4000-8000-000000000000">
+        <from>
+          <member>any</member>
+        </from>
+        <to>
+          <member>any</member>
+        </to>
+        <source>
+          <member>any</member>
+        </source>
+        <destination>
+          <member>any</member>
+        </destination>
+        <source-user>
+          <member>any</member>
+        </source-user>
+        <category>
+          <member>any</member>
+        </category>
+        <application>
+          <member>any</member>
+        </application>
+        <service>
+          <member>application-default</member>
+        </service>
+        <action>deny</action>
+        <description>Explicit deny with logging</description>
+        <log-start>no</log-start>
+        <log-end>yes</log-end>
+      </entry>
+    </rules>
+  </result>
+</response>

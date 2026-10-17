@@ -1,0 +1,24 @@
+{
+  "name": "address-group-cycle",
+  "description": "Baseline with shared address groups grp-a and grp-b referencing each other.",
+  "panos_version": "11.1",
+  "extends": "baseline",
+  "responses": [
+    {
+      "request": {
+        "type": "config",
+        "action": "show",
+        "xpath": "/config/shared/address-group"
+      },
+      "sample": "11.1/config/address-group-shared/cycle"
+    },
+    {
+      "request": {
+        "type": "config",
+        "action": "get",
+        "xpath": "/config/shared/address-group"
+      },
+      "sample": "11.1/config/address-group-shared/cycle"
+    }
+  ]
+}

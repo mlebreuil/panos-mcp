@@ -1,0 +1,20 @@
+{
+  "id": "11.2/op/show-devices-all/out-of-sync",
+  "request": {
+    "type": "op",
+    "cmd": "<show><devices><all></all></devices></show>"
+  },
+  "panos_version": "11.2",
+  "description": "Baseline estate with fw-hq-02 and fw-dc-01 out of sync",
+  "provenance": {
+    "source": "synthetic",
+    "url": "https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-panorama-api/pan-os-xml-api-use-cases/query-a-firewall-from-panorama-api",
+    "notes": "Hand-authored response following the request/response structure described in the PAN-OS and Panorama XML API guide (provenance.url); not a verbatim copy. Unverified against a live Panorama. Identical in structure to the 11.1 sample per documentation (11.1 & later guide)."
+  },
+  "sanitization": {
+    "tool_version": "panos-mcp 0.1.0",
+    "sanitized_at": "2026-10-17T07:51:48Z",
+    "leak_check": "passed"
+  },
+  "status": "unverified"
+}

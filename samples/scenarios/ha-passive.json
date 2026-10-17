@@ -1,0 +1,15 @@
+{
+  "name": "ha-passive",
+  "description": "Baseline, but this Panorama is the passive HA peer.",
+  "panos_version": "11.1",
+  "extends": "baseline",
+  "responses": [
+    {
+      "request": {
+        "type": "op",
+        "cmd": "<show><high-availability><state></state></high-availability></show>"
+      },
+      "sample": "11.1/op/show-high-availability-state/passive"
+    }
+  ]
+}

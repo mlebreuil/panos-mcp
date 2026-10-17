@@ -1,0 +1,39 @@
+<response status="success">
+  <result>
+    <address-group>
+      <entry name="web-servers">
+        <static>
+          <member>web-srv-01</member>
+          <member>web-srv-02</member>
+        </static>
+        <tag>
+          <member>web</member>
+        </tag>
+      </entry>
+      <entry name="all-servers">
+        <static>
+          <member>web-servers</member>
+          <member>db-srv-01</member>
+        </static>
+        <description>Nested group</description>
+      </entry>
+      <entry name="dyn-web">
+        <dynamic>
+          <filter>'web' and 'prod'</filter>
+        </dynamic>
+      </entry>
+      <entry name="grp-a">
+        <static>
+          <member>grp-b</member>
+          <member>web-srv-01</member>
+        </static>
+      </entry>
+      <entry name="grp-b">
+        <static>
+          <member>grp-a</member>
+          <member>db-srv-01</member>
+        </static>
+      </entry>
+    </address-group>
+  </result>
+</response>

@@ -1,0 +1,35 @@
+<response status="success">
+  <result>
+    <rules>
+      <entry name="Global-Cleanup" uuid="98146193-0000-4000-8000-000000000000">
+        <from>
+          <member>any</member>
+        </from>
+        <to>
+          <member>any</member>
+        </to>
+        <source>
+          <member>any</member>
+        </source>
+        <destination>
+          <member>any</member>
+        </destination>
+        <source-user>
+          <member>any</member>
+        </source-user>
+        <category>
+          <member>any</member>
+        </category>
+        <application>
+          <member>any</member>
+        </application>
+        <service>
+          <member>application-default</member>
+        </service>
+        <action>drop</action>
+        <log-start>no</log-start>
+        <log-end>yes</log-end>
+      </entry>
+    </rules>
+  </result>
+</response>

@@ -1,0 +1,13 @@
+<response status="success">
+  <result>
+    <address>
+      <entry name="app-lb">
+        <ip-netmask>10.20.3.10/32</ip-netmask>
+        <tag>
+          <member>prod</member>
+        </tag>
+        <description>Load balancer VIP</description>
+      </entry>
+    </address>
+  </result>
+</response>

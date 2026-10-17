@@ -1,0 +1,171 @@
+<response status="success">
+  <result>
+    <job>
+      <tenq>09:00:00</tenq>
+      <tdeq>09:00:00</tdeq>
+      <tlast>09:00:01</tlast>
+      <status>FIN</status>
+      <id>1</id>
+    </job>
+    <log>
+      <logs count="6" progress="100">
+        <entry logid="7200000001">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:59:41</receive_time>
+          <serial>900000000001</serial>
+          <seqno>7001</seqno>
+          <time_generated>2026/10/16 08:59:41</time_generated>
+          <device_name>fw-hq-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>TRAFFIC</type>
+          <subtype>deny</subtype>
+          <src>10.10.1.5</src>
+          <dst>192.0.2.10</dst>
+          <rule>Block-Known-Bad</rule>
+          <srcuser />
+          <app>ssl</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <sport>51234</sport>
+          <dport>443</dport>
+          <proto>tcp</proto>
+          <action>deny</action>
+          <bytes>18342</bytes>
+          <packets>42</packets>
+          <session_end_reason>policy-deny</session_end_reason>
+          <category>any</category>
+        </entry>
+        <entry logid="7200000002">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:58:12</receive_time>
+          <serial>900000000001</serial>
+          <seqno>7002</seqno>
+          <time_generated>2026/10/16 08:58:12</time_generated>
+          <device_name>fw-hq-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>TRAFFIC</type>
+          <subtype>deny</subtype>
+          <src>10.10.1.5</src>
+          <dst>192.0.2.10</dst>
+          <rule>Block-Known-Bad</rule>
+          <srcuser />
+          <app>ssl</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <sport>51234</sport>
+          <dport>443</dport>
+          <proto>tcp</proto>
+          <action>deny</action>
+          <bytes>18342</bytes>
+          <packets>42</packets>
+          <session_end_reason>policy-deny</session_end_reason>
+          <category>any</category>
+        </entry>
+        <entry logid="7200000003">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:57:03</receive_time>
+          <serial>900000000001</serial>
+          <seqno>7003</seqno>
+          <time_generated>2026/10/16 08:57:03</time_generated>
+          <device_name>fw-hq-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>TRAFFIC</type>
+          <subtype>end</subtype>
+          <src>10.10.1.7</src>
+          <dst>198.51.100.25</dst>
+          <rule>Allow-Admin-Web</rule>
+          <srcuser />
+          <app>web-browsing</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <sport>51234</sport>
+          <dport>443</dport>
+          <proto>tcp</proto>
+          <action>allow</action>
+          <bytes>18342</bytes>
+          <packets>42</packets>
+          <session_end_reason>tcp-fin</session_end_reason>
+          <category>any</category>
+        </entry>
+        <entry logid="7200000004">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:55:30</receive_time>
+          <serial>900000000003</serial>
+          <seqno>7004</seqno>
+          <time_generated>2026/10/16 08:55:30</time_generated>
+          <device_name>fw-branch-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>TRAFFIC</type>
+          <subtype>end</subtype>
+          <src>10.30.2.15</src>
+          <dst>203.0.113.80</dst>
+          <rule>Allow-Branch-Web</rule>
+          <srcuser />
+          <app>web-browsing</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <sport>51234</sport>
+          <dport>80</dport>
+          <proto>tcp</proto>
+          <action>allow</action>
+          <bytes>18342</bytes>
+          <packets>42</packets>
+          <session_end_reason>tcp-fin</session_end_reason>
+          <category>any</category>
+        </entry>
+        <entry logid="7200000005">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:54:00</receive_time>
+          <serial>900000000004</serial>
+          <seqno>7005</seqno>
+          <time_generated>2026/10/16 08:54:00</time_generated>
+          <device_name>fw-dc-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>TRAFFIC</type>
+          <subtype>end</subtype>
+          <src>10.20.1.10</src>
+          <dst>10.1.1.53</dst>
+          <rule>Allow-DNS</rule>
+          <srcuser />
+          <app>dns</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <sport>51234</sport>
+          <dport>53</dport>
+          <proto>tcp</proto>
+          <action>allow</action>
+          <bytes>18342</bytes>
+          <packets>42</packets>
+          <session_end_reason>aged-out</session_end_reason>
+          <category>any</category>
+        </entry>
+        <entry logid="7200000006">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:50:44</receive_time>
+          <serial>900000000003</serial>
+          <seqno>7006</seqno>
+          <time_generated>2026/10/16 08:50:44</time_generated>
+          <device_name>fw-branch-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>TRAFFIC</type>
+          <subtype>deny</subtype>
+          <src>10.30.2.16</src>
+          <dst>192.0.2.10</dst>
+          <rule>Block-Known-Bad</rule>
+          <srcuser />
+          <app>ssl</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <sport>51234</sport>
+          <dport>443</dport>
+          <proto>tcp</proto>
+          <action>deny</action>
+          <bytes>18342</bytes>
+          <packets>42</packets>
+          <session_end_reason>policy-deny</session_end_reason>
+          <category>any</category>
+        </entry>
+      </logs>
+    </log>
+  </result>
+</response>

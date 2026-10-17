@@ -1,0 +1,41 @@
+<response status="success">
+  <result>
+    <devicegroups>
+      <entry name="Global-DG">
+        <devices />
+      </entry>
+      <entry name="Region-A-DG">
+        <devices>
+          <entry name="900000000001">
+            <serial>900000000001</serial>
+            <connected>yes</connected>
+            <hostname>fw-hq-01</hostname>
+          </entry>
+          <entry name="900000000002">
+            <serial>900000000002</serial>
+            <connected>yes</connected>
+            <hostname>fw-hq-02</hostname>
+          </entry>
+        </devices>
+      </entry>
+      <entry name="Branch-DG">
+        <devices>
+          <entry name="900000000003">
+            <serial>900000000003</serial>
+            <connected>yes</connected>
+            <hostname>fw-branch-01</hostname>
+          </entry>
+        </devices>
+      </entry>
+      <entry name="Region-B-DG">
+        <devices>
+          <entry name="900000000004">
+            <serial>900000000004</serial>
+            <connected>yes</connected>
+            <hostname>fw-dc-01</hostname>
+          </entry>
+        </devices>
+      </entry>
+    </devicegroups>
+  </result>
+</response>

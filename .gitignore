@@ -218,3 +218,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# agent
+.claude/
+
+
+# panos-mcp: secrets and sanitization material (never commit)
+*.env
+.panos-mcp-sanitize/
+sanitize-mapping*.json
+sanitize.key
+
+# panos-mcp: generated scale dataset (panos-mcp-samples generate large-estate)
+samples/**/large-estate.xml
+samples/**/large-estate.meta.json
+samples/scenarios/large-estate.json

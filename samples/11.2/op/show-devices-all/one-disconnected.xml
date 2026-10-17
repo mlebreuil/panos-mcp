@@ -1,0 +1,131 @@
+<response status="success">
+  <result>
+    <devices>
+      <entry name="900000000001">
+        <serial>900000000001</serial>
+        <connected>yes</connected>
+        <unsupported-version>no</unsupported-version>
+        <deactivated>no</deactivated>
+        <hostname>fw-hq-01</hostname>
+        <ip-address>10.10.0.11</ip-address>
+        <ipv6-address>unknown</ipv6-address>
+        <uptime>21 days, 4:10:33</uptime>
+        <family>3400</family>
+        <model>PA-3420</model>
+        <sw-version>11.2.3</sw-version>
+        <app-version>8912-9301</app-version>
+        <av-version>5012-5530</av-version>
+        <wildfire-version>905123-909001</wildfire-version>
+        <threat-version>8912-9301</threat-version>
+        <url-filtering-version>20261016.20001</url-filtering-version>
+        <multi-vsys>no</multi-vsys>
+        <vsys>
+          <entry name="vsys1">
+            <display-name>vsys1</display-name>
+            <shared-policy-status>In Sync</shared-policy-status>
+            <shared-policy-md5sum>5f2b0e5c1a7d4b2e9c3f1a0b7d6e8c41</shared-policy-md5sum>
+          </entry>
+        </vsys>
+        <ha>
+          <state>active</state>
+          <peer>
+            <serial>900000000002</serial>
+          </peer>
+        </ha>
+        <connected-at>2026/09/25 05:00:12</connected-at>
+      </entry>
+      <entry name="900000000002">
+        <serial>900000000002</serial>
+        <connected>yes</connected>
+        <unsupported-version>no</unsupported-version>
+        <deactivated>no</deactivated>
+        <hostname>fw-hq-02</hostname>
+        <ip-address>10.10.0.12</ip-address>
+        <ipv6-address>unknown</ipv6-address>
+        <uptime>21 days, 4:10:33</uptime>
+        <family>3400</family>
+        <model>PA-3420</model>
+        <sw-version>11.2.3</sw-version>
+        <app-version>8912-9301</app-version>
+        <av-version>5012-5530</av-version>
+        <wildfire-version>905123-909001</wildfire-version>
+        <threat-version>8912-9301</threat-version>
+        <url-filtering-version>20261016.20001</url-filtering-version>
+        <multi-vsys>no</multi-vsys>
+        <vsys>
+          <entry name="vsys1">
+            <display-name>vsys1</display-name>
+            <shared-policy-status>In Sync</shared-policy-status>
+            <shared-policy-md5sum>5f2b0e5c1a7d4b2e9c3f1a0b7d6e8c41</shared-policy-md5sum>
+          </entry>
+        </vsys>
+        <ha>
+          <state>passive</state>
+          <peer>
+            <serial>900000000001</serial>
+          </peer>
+        </ha>
+        <connected-at>2026/09/25 05:00:12</connected-at>
+      </entry>
+      <entry name="900000000003">
+        <serial>900000000003</serial>
+        <connected>no</connected>
+        <unsupported-version>no</unsupported-version>
+        <deactivated>no</deactivated>
+        <hostname>fw-branch-01</hostname>
+        <ip-address>10.30.0.11</ip-address>
+        <ipv6-address>unknown</ipv6-address>
+        <uptime />
+        <family>400</family>
+        <model>PA-440</model>
+        <sw-version>10.2.10-h3</sw-version>
+        <app-version>8912-9301</app-version>
+        <av-version>5012-5530</av-version>
+        <wildfire-version>905123-909001</wildfire-version>
+        <threat-version>8912-9301</threat-version>
+        <url-filtering-version>20261016.20001</url-filtering-version>
+        <multi-vsys>no</multi-vsys>
+        <vsys>
+          <entry name="vsys1">
+            <display-name>vsys1</display-name>
+            <shared-policy-status>In Sync</shared-policy-status>
+            <shared-policy-md5sum>5f2b0e5c1a7d4b2e9c3f1a0b7d6e8c41</shared-policy-md5sum>
+          </entry>
+        </vsys>
+        <connected-at />
+      </entry>
+      <entry name="900000000004">
+        <serial>900000000004</serial>
+        <connected>yes</connected>
+        <unsupported-version>no</unsupported-version>
+        <deactivated>no</deactivated>
+        <hostname>fw-dc-01</hostname>
+        <ip-address>10.20.0.11</ip-address>
+        <ipv6-address>unknown</ipv6-address>
+        <uptime>21 days, 4:10:33</uptime>
+        <family>5400</family>
+        <model>PA-5430</model>
+        <sw-version>11.2.3</sw-version>
+        <app-version>8912-9301</app-version>
+        <av-version>5012-5530</av-version>
+        <wildfire-version>905123-909001</wildfire-version>
+        <threat-version>8912-9301</threat-version>
+        <url-filtering-version>20261016.20001</url-filtering-version>
+        <multi-vsys>yes</multi-vsys>
+        <vsys>
+          <entry name="vsys1">
+            <display-name>vsys1</display-name>
+            <shared-policy-status>In Sync</shared-policy-status>
+            <shared-policy-md5sum>5f2b0e5c1a7d4b2e9c3f1a0b7d6e8c41</shared-policy-md5sum>
+          </entry>
+          <entry name="vsys2">
+            <display-name>vsys2</display-name>
+            <shared-policy-status>In Sync</shared-policy-status>
+            <shared-policy-md5sum>5f2b0e5c1a7d4b2e9c3f1a0b7d6e8c41</shared-policy-md5sum>
+          </entry>
+        </vsys>
+        <connected-at>2026/09/25 05:00:12</connected-at>
+      </entry>
+    </devices>
+  </result>
+</response>

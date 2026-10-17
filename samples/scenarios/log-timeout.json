@@ -1,0 +1,48 @@
+{
+  "name": "log-timeout",
+  "description": "Baseline, but every log query stays in progress (job never finishes).",
+  "panos_version": "11.1",
+  "extends": "baseline",
+  "responses": [
+    {
+      "request": {
+        "type": "log",
+        "log_type": "traffic",
+        "log_phase": "result"
+      },
+      "sample": "11.1/log/traffic-result/pending"
+    },
+    {
+      "request": {
+        "type": "log",
+        "log_type": "threat",
+        "log_phase": "result"
+      },
+      "sample": "11.1/log/traffic-result/pending"
+    },
+    {
+      "request": {
+        "type": "log",
+        "log_type": "url",
+        "log_phase": "result"
+      },
+      "sample": "11.1/log/traffic-result/pending"
+    },
+    {
+      "request": {
+        "type": "log",
+        "log_type": "system",
+        "log_phase": "result"
+      },
+      "sample": "11.1/log/traffic-result/pending"
+    },
+    {
+      "request": {
+        "type": "log",
+        "log_type": "config",
+        "log_phase": "result"
+      },
+      "sample": "11.1/log/traffic-result/pending"
+    }
+  ]
+}

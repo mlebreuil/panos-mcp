@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "description": "Read-only requests used by the 13 MCP tools. {scope} expands to shared and every device group; {job_id} is the latest job; {serial} the first connected firewall; {dag} the first shared dynamic address group.",
+  "op": [
+    {
+      "slug": "show-system-info",
+      "cmd": "<show><system><info></info></system></show>"
+    },
+    {
+      "slug": "show-high-availability-state",
+      "cmd": "<show><high-availability><state></state></high-availability></show>"
+    },
+    {
+      "slug": "request-license-info",
+      "cmd": "<request><license><info></info></license></request>"
+    },
+    {
+      "slug": "show-devices-all",
+      "cmd": "<show><devices><all></all></devices></show>"
+    },
+    {
+      "slug": "show-devicegroups",
+      "cmd": "<show><devicegroups></devicegroups></show>"
+    },
+    {
+      "slug": "show-dg-hierarchy",
+      "cmd": "<show><dg-hierarchy></dg-hierarchy></show>"
+    },
+    {
+      "slug": "show-templates",
+      "cmd": "<show><templates></templates></show>"
+    },
+    {
+      "slug": "show-jobs-all",
+      "cmd": "<show><jobs><all></all></jobs></show>"
+    },
+    {
+      "slug": "check-pending-changes",
+      "cmd": "<check><pending-changes></pending-changes></check>"
+    },
+    {
+      "slug": "show-jobs-id",
+      "cmd": "<show><jobs><id>{job_id}</id></jobs></show>"
+    },
+    {
+      "slug": "show-object-dynamic-address-group-name",
+      "cmd": "<show><object><dynamic-address-group><name>{dag}</name></dynamic-address-group></object></show>",
+      "target": "{serial}"
+    }
+  ],
+  "config": [
+    {
+      "xpath": "/config/devices/entry[@name='localhost.localdomain']/template-stack",
+      "slug": "template-stack"
+    },
+    {
+      "xpath": "{scope_xpath}/pre-rulebase/security/rules",
+      "slug": "security-rules-{scope}-pre",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/post-rulebase/security/rules",
+      "slug": "security-rules-{scope}-post",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/pre-rulebase/nat/rules",
+      "slug": "nat-rules-{scope}-pre",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/post-rulebase/nat/rules",
+      "slug": "nat-rules-{scope}-post",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/address",
+      "slug": "address-{scope}",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/address-group",
+      "slug": "address-group-{scope}",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/service",
+      "slug": "service-{scope}",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/service-group",
+      "slug": "service-group-{scope}",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/application-group",
+      "slug": "application-group-{scope}",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/tag",
+      "slug": "tag-{scope}",
+      "for_each": "scope"
+    },
+    {
+      "xpath": "{scope_xpath}/profile-group",
+      "slug": "profile-group-{scope}",
+      "for_each": "scope"
+    }
+  ],
+  "log": [
+    {
+      "log_type": "traffic",
+      "nlogs": 20
+    },
+    {
+      "log_type": "threat",
+      "nlogs": 20
+    },
+    {
+      "log_type": "url",
+      "nlogs": 20
+    },
+    {
+      "log_type": "system",
+      "nlogs": 20
+    },
+    {
+      "log_type": "config",
+      "nlogs": 20
+    }
+  ]
+}

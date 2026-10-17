@@ -1,0 +1,21 @@
+{
+  "id": "11.1/config/address-shared/candidate",
+  "request": {
+    "type": "config",
+    "action": "get",
+    "xpath": "/config/shared/address"
+  },
+  "panos_version": "11.1",
+  "description": "Shared addresses in the candidate config: db-srv-01 changed to 10.20.2.20",
+  "provenance": {
+    "source": "synthetic",
+    "url": "https://docs.paloaltonetworks.com/pan-os/11-1/pan-os-panorama-api/about-the-pan-os-xml-api/structure-of-a-pan-os-xml-api-request/xml-and-xpath",
+    "notes": "Hand-authored response following the request/response structure described in the PAN-OS and Panorama XML API guide (provenance.url); not a verbatim copy. Unverified against a live Panorama."
+  },
+  "sanitization": {
+    "tool_version": "panos-mcp 0.1.0",
+    "sanitized_at": "2026-10-17T07:54:27Z",
+    "leak_check": "passed"
+  },
+  "status": "unverified"
+}

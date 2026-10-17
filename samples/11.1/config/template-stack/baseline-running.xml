@@ -1,0 +1,34 @@
+<response status="success">
+  <result>
+    <template-stack>
+      <entry name="Stack-A">
+        <templates>
+          <member>T-Region-A</member>
+          <member>T-Base</member>
+        </templates>
+        <devices>
+          <entry name="900000000001" />
+          <entry name="900000000002" />
+        </devices>
+      </entry>
+      <entry name="Stack-Branch">
+        <templates>
+          <member>T-Branch</member>
+          <member>T-Base</member>
+        </templates>
+        <devices>
+          <entry name="900000000003" />
+        </devices>
+      </entry>
+      <entry name="Stack-B">
+        <templates>
+          <member>T-Region-B</member>
+          <member>T-Base</member>
+        </templates>
+        <devices>
+          <entry name="900000000004" />
+        </devices>
+      </entry>
+    </template-stack>
+  </result>
+</response>

@@ -1,0 +1,13 @@
+<response status="success">
+  <result>
+    <address>
+      <entry name="web-srv-01">
+        <ip-netmask>10.30.1.10/32</ip-netmask>
+        <description>Branch-local override</description>
+      </entry>
+      <entry name="branch-printer">
+        <ip-netmask>10.30.5.20/32</ip-netmask>
+      </entry>
+    </address>
+  </result>
+</response>

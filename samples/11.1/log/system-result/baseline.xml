@@ -1,0 +1,57 @@
+<response status="success">
+  <result>
+    <job>
+      <tenq>09:00:00</tenq>
+      <tdeq>09:00:00</tdeq>
+      <tlast>09:00:01</tlast>
+      <status>FIN</status>
+      <id>1</id>
+    </job>
+    <log>
+      <logs count="3" progress="100">
+        <entry logid="7200000031">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:41:00</receive_time>
+          <serial>900000000001</serial>
+          <seqno>7031</seqno>
+          <time_generated>2026/10/16 08:41:00</time_generated>
+          <device_name>fw-hq-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>SYSTEM</type>
+          <subtype>general</subtype>
+          <eventid>general</eventid>
+          <severity>informational</severity>
+          <opaque>Commit job 106 completed successfully</opaque>
+        </entry>
+        <entry logid="7200000032">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:15:00</receive_time>
+          <serial>900000000003</serial>
+          <seqno>7032</seqno>
+          <time_generated>2026/10/16 08:15:00</time_generated>
+          <device_name>fw-branch-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>SYSTEM</type>
+          <subtype>ha</subtype>
+          <eventid>ha-link-down</eventid>
+          <severity>high</severity>
+          <opaque>HA1 link down</opaque>
+        </entry>
+        <entry logid="7200000033">
+          <domain>1</domain>
+          <receive_time>2026/10/16 07:00:00</receive_time>
+          <serial>900000000004</serial>
+          <seqno>7033</seqno>
+          <time_generated>2026/10/16 07:00:00</time_generated>
+          <device_name>fw-dc-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>SYSTEM</type>
+          <subtype>general</subtype>
+          <eventid>license-expire</eventid>
+          <severity>medium</severity>
+          <opaque>Threat prevention license expires in 30 days</opaque>
+        </entry>
+      </logs>
+    </log>
+  </result>
+</response>

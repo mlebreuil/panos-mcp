@@ -1,0 +1,14 @@
+<response status="success">
+  <result>
+    <rules>
+      <entry name="Allow-Admin-Web">
+        <index>3</index>
+        <from>trust</from>
+        <to>dmz</to>
+        <source>any</source>
+        <destination>any</destination>
+        <action>allow</action>
+      </entry>
+    </rules>
+  </result>
+</response>

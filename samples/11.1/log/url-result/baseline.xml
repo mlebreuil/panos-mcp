@@ -1,0 +1,81 @@
+<response status="success">
+  <result>
+    <job>
+      <tenq>09:00:00</tenq>
+      <tdeq>09:00:00</tdeq>
+      <tlast>09:00:01</tlast>
+      <status>FIN</status>
+      <id>1</id>
+    </job>
+    <log>
+      <logs count="3" progress="100">
+        <entry logid="7200000021">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:20:00</receive_time>
+          <serial>900000000003</serial>
+          <seqno>7021</seqno>
+          <time_generated>2026/10/16 08:20:00</time_generated>
+          <device_name>fw-branch-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>THREAT</type>
+          <subtype>url</subtype>
+          <src>10.30.2.15</src>
+          <dst>203.0.113.80</dst>
+          <rule>Allow-Branch-Web</rule>
+          <app>web-browsing</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <dport>443</dport>
+          <proto>tcp</proto>
+          <action>alert</action>
+          <misc>"news.example.com/today"</misc>
+          <category>news</category>
+        </entry>
+        <entry logid="7200000022">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:21:00</receive_time>
+          <serial>900000000003</serial>
+          <seqno>7022</seqno>
+          <time_generated>2026/10/16 08:21:00</time_generated>
+          <device_name>fw-branch-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>THREAT</type>
+          <subtype>url</subtype>
+          <src>10.30.2.15</src>
+          <dst>198.51.100.30</dst>
+          <rule>Allow-Branch-Web</rule>
+          <app>web-browsing</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <dport>443</dport>
+          <proto>tcp</proto>
+          <action>block-url</action>
+          <misc>"files.example.net/setup.exe"</misc>
+          <category>malware</category>
+        </entry>
+        <entry logid="7200000023">
+          <domain>1</domain>
+          <receive_time>2026/10/16 08:22:00</receive_time>
+          <serial>900000000003</serial>
+          <seqno>7023</seqno>
+          <time_generated>2026/10/16 08:22:00</time_generated>
+          <device_name>fw-branch-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>THREAT</type>
+          <subtype>url</subtype>
+          <src>10.30.2.15</src>
+          <dst>192.0.2.40</dst>
+          <rule>Allow-Branch-Web</rule>
+          <app>web-browsing</app>
+          <from>trust</from>
+          <to>untrust</to>
+          <dport>443</dport>
+          <proto>tcp</proto>
+          <action>alert</action>
+          <misc>"social.example.org/feed"</misc>
+          <category>social-networking</category>
+        </entry>
+      </logs>
+    </log>
+  </result>
+</response>

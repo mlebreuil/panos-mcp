@@ -1,0 +1,14 @@
+<response status="success">
+  <result>
+    <rules>
+      <entry name="Block-Known-Bad">
+        <index>3</index>
+        <from>any</from>
+        <to>any</to>
+        <source>any</source>
+        <destination>any</destination>
+        <action>deny</action>
+      </entry>
+    </rules>
+  </result>
+</response>

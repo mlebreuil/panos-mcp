@@ -1,0 +1,63 @@
+<response status="success">
+  <result>
+    <job>
+      <tenq>09:00:00</tenq>
+      <tdeq>09:00:00</tdeq>
+      <tlast>09:00:01</tlast>
+      <status>FIN</status>
+      <id>1</id>
+    </job>
+    <log>
+      <logs count="3" progress="100">
+        <entry logid="7200000041">
+          <domain>1</domain>
+          <receive_time>2026/10/16 07:55:00</receive_time>
+          <serial>900000000001</serial>
+          <seqno>7041</seqno>
+          <time_generated>2026/10/16 07:55:00</time_generated>
+          <device_name>fw-hq-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>CONFIG</type>
+          <subtype>0</subtype>
+          <admin>admin</admin>
+          <cmd>edit</cmd>
+          <path> vsys  vsys1 rulebase security rules Allow-Admin-Web</path>
+          <result>Succeeded</result>
+          <client>Web</client>
+        </entry>
+        <entry logid="7200000042">
+          <domain>1</domain>
+          <receive_time>2026/10/16 07:50:00</receive_time>
+          <serial>900000000001</serial>
+          <seqno>7042</seqno>
+          <time_generated>2026/10/16 07:50:00</time_generated>
+          <device_name>fw-hq-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>CONFIG</type>
+          <subtype>0</subtype>
+          <admin>netops</admin>
+          <cmd>set</cmd>
+          <path> vsys  vsys1 address web-srv-02</path>
+          <result>Succeeded</result>
+          <client>CLI</client>
+        </entry>
+        <entry logid="7200000043">
+          <domain>1</domain>
+          <receive_time>2026/10/16 07:45:00</receive_time>
+          <serial>900000000003</serial>
+          <seqno>7043</seqno>
+          <time_generated>2026/10/16 07:45:00</time_generated>
+          <device_name>fw-branch-01</device_name>
+          <vsys>vsys1</vsys>
+          <type>CONFIG</type>
+          <subtype>0</subtype>
+          <admin>admin</admin>
+          <cmd>delete</cmd>
+          <path> vsys  vsys1 address web-old</path>
+          <result>Failed</result>
+          <client>Web</client>
+        </entry>
+      </logs>
+    </log>
+  </result>
+</response>

@@ -1,0 +1,1165 @@
+{
+  "find_object_references": {
+    "$defs": {
+      "ConfigSource": {
+        "enum": [
+          "running",
+          "candidate"
+        ],
+        "title": "ConfigSource",
+        "type": "string"
+      },
+      "ObjectKind": {
+        "enum": [
+          "address",
+          "address_group",
+          "service",
+          "service_group",
+          "application_group",
+          "tag",
+          "security_profile_group"
+        ],
+        "title": "ObjectKind",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "config_source": {
+        "$ref": "#/$defs/ConfigSource",
+        "default": "running",
+        "description": "running (committed) or candidate (uncommitted) config"
+      },
+      "kind": {
+        "$ref": "#/$defs/ObjectKind",
+        "description": "Object kind"
+      },
+      "limit": {
+        "default": 50,
+        "description": "Maximum number of items to return",
+        "maximum": 500,
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "name": {
+        "description": "Object name",
+        "title": "Name",
+        "type": "string"
+      },
+      "offset": {
+        "default": 0,
+        "description": "Number of items to skip",
+        "minimum": 0,
+        "title": "Offset",
+        "type": "integer"
+      },
+      "scope": {
+        "default": "shared",
+        "description": "Scope where the object is defined",
+        "title": "Scope",
+        "type": "string"
+      }
+    },
+    "required": [
+      "name",
+      "kind"
+    ],
+    "title": "find_object_referencesArguments",
+    "type": "object"
+  },
+  "get_job": {
+    "properties": {
+      "job_id": {
+        "description": "Job id from list_jobs",
+        "exclusiveMinimum": 0,
+        "title": "Job Id",
+        "type": "integer"
+      },
+      "max_devices": {
+        "default": 200,
+        "description": "Maximum per-firewall results to include",
+        "maximum": 1000,
+        "minimum": 1,
+        "title": "Max Devices",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "job_id"
+    ],
+    "title": "get_jobArguments",
+    "type": "object"
+  },
+  "get_nat_rules": {
+    "$defs": {
+      "ConfigSource": {
+        "enum": [
+          "running",
+          "candidate"
+        ],
+        "title": "ConfigSource",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "config_source": {
+        "$ref": "#/$defs/ConfigSource",
+        "default": "running",
+        "description": "running (committed) or candidate (uncommitted) config"
+      },
+      "destination": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Filter (exact member, or IP/CIDR for addresses)",
+        "title": "Destination"
+      },
+      "disabled": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Only disabled/enabled rules",
+        "title": "Disabled"
+      },
+      "effective": {
+        "default": false,
+        "description": "Include rules inherited from shared and ancestor device groups, in firewall evaluation order",
+        "title": "Effective",
+        "type": "boolean"
+      },
+      "from_zone": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Source zone",
+        "title": "From Zone"
+      },
+      "limit": {
+        "default": 50,
+        "description": "Maximum number of items to return",
+        "maximum": 500,
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "name_contains": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Substring of the rule name",
+        "title": "Name Contains"
+      },
+      "offset": {
+        "default": 0,
+        "description": "Number of items to skip",
+        "minimum": 0,
+        "title": "Offset",
+        "type": "integer"
+      },
+      "rulebase": {
+        "default": "both",
+        "description": "Pre-rules, post-rules or both",
+        "enum": [
+          "pre",
+          "post",
+          "both"
+        ],
+        "title": "Rulebase",
+        "type": "string"
+      },
+      "scope": {
+        "default": "shared",
+        "description": "\"shared\" or a device-group name",
+        "title": "Scope",
+        "type": "string"
+      },
+      "service": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Service or service group",
+        "title": "Service"
+      },
+      "source": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Filter (exact member, or IP/CIDR for addresses)",
+        "title": "Source"
+      },
+      "tag": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Rule tag",
+        "title": "Tag"
+      },
+      "to_zone": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Destination zone",
+        "title": "To Zone"
+      }
+    },
+    "title": "get_nat_rulesArguments",
+    "type": "object"
+  },
+  "get_objects": {
+    "$defs": {
+      "ConfigSource": {
+        "enum": [
+          "running",
+          "candidate"
+        ],
+        "title": "ConfigSource",
+        "type": "string"
+      },
+      "ObjectKind": {
+        "enum": [
+          "address",
+          "address_group",
+          "service",
+          "service_group",
+          "application_group",
+          "tag",
+          "security_profile_group"
+        ],
+        "title": "ObjectKind",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "config_source": {
+        "$ref": "#/$defs/ConfigSource",
+        "default": "running",
+        "description": "running (committed) or candidate (uncommitted) config"
+      },
+      "include_inherited": {
+        "default": false,
+        "description": "Also list objects from shared and ancestor device groups",
+        "title": "Include Inherited",
+        "type": "boolean"
+      },
+      "kind": {
+        "$ref": "#/$defs/ObjectKind",
+        "description": "Object kind"
+      },
+      "limit": {
+        "default": 50,
+        "description": "Maximum number of items to return",
+        "maximum": 500,
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "name": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Exact object name",
+        "title": "Name"
+      },
+      "name_contains": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Substring of the name",
+        "title": "Name Contains"
+      },
+      "offset": {
+        "default": 0,
+        "description": "Number of items to skip",
+        "minimum": 0,
+        "title": "Offset",
+        "type": "integer"
+      },
+      "scope": {
+        "default": "shared",
+        "description": "\"shared\" or a device-group name",
+        "title": "Scope",
+        "type": "string"
+      },
+      "value_contains": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Substring of an address value or service port",
+        "title": "Value Contains"
+      }
+    },
+    "required": [
+      "kind"
+    ],
+    "title": "get_objectsArguments",
+    "type": "object"
+  },
+  "get_panorama_info": {
+    "properties": {},
+    "title": "get_panorama_infoArguments",
+    "type": "object"
+  },
+  "get_security_rules": {
+    "$defs": {
+      "ConfigSource": {
+        "enum": [
+          "running",
+          "candidate"
+        ],
+        "title": "ConfigSource",
+        "type": "string"
+      },
+      "RuleAction": {
+        "enum": [
+          "allow",
+          "deny",
+          "drop",
+          "reset-client",
+          "reset-server",
+          "reset-both"
+        ],
+        "title": "RuleAction",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "action": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/RuleAction"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Rule action"
+      },
+      "application": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Application or group",
+        "title": "Application"
+      },
+      "config_source": {
+        "$ref": "#/$defs/ConfigSource",
+        "default": "running",
+        "description": "running (committed) or candidate (uncommitted) config"
+      },
+      "destination": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Filter (exact member, or IP/CIDR for addresses)",
+        "title": "Destination"
+      },
+      "disabled": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Only disabled/enabled rules",
+        "title": "Disabled"
+      },
+      "effective": {
+        "default": false,
+        "description": "Include rules inherited from shared and ancestor device groups, in firewall evaluation order",
+        "title": "Effective",
+        "type": "boolean"
+      },
+      "from_zone": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Source zone",
+        "title": "From Zone"
+      },
+      "limit": {
+        "default": 50,
+        "description": "Maximum number of items to return",
+        "maximum": 500,
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "name_contains": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Substring of the rule name",
+        "title": "Name Contains"
+      },
+      "offset": {
+        "default": 0,
+        "description": "Number of items to skip",
+        "minimum": 0,
+        "title": "Offset",
+        "type": "integer"
+      },
+      "rulebase": {
+        "default": "both",
+        "description": "Pre-rules, post-rules or both",
+        "enum": [
+          "pre",
+          "post",
+          "both"
+        ],
+        "title": "Rulebase",
+        "type": "string"
+      },
+      "scope": {
+        "default": "shared",
+        "description": "\"shared\" or a device-group name",
+        "title": "Scope",
+        "type": "string"
+      },
+      "service": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Service or service group",
+        "title": "Service"
+      },
+      "source": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Filter (exact member, or IP/CIDR for addresses)",
+        "title": "Source"
+      },
+      "tag": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Rule tag",
+        "title": "Tag"
+      },
+      "to_zone": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Destination zone",
+        "title": "To Zone"
+      }
+    },
+    "title": "get_security_rulesArguments",
+    "type": "object"
+  },
+  "list_device_groups": {
+    "properties": {
+      "include_members": {
+        "default": true,
+        "description": "Include member firewall serials",
+        "title": "Include Members",
+        "type": "boolean"
+      },
+      "limit": {
+        "default": 50,
+        "description": "Maximum number of items to return",
+        "maximum": 500,
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "offset": {
+        "default": 0,
+        "description": "Number of items to skip",
+        "minimum": 0,
+        "title": "Offset",
+        "type": "integer"
+      },
+      "root": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Only this device group and its descendants",
+        "title": "Root"
+      }
+    },
+    "title": "list_device_groupsArguments",
+    "type": "object"
+  },
+  "list_jobs": {
+    "$defs": {
+      "JobStatus": {
+        "enum": [
+          "pending",
+          "active",
+          "finished"
+        ],
+        "title": "JobStatus",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "job_type": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Job type, e.g. Commit, CommitAll, Content",
+        "title": "Job Type"
+      },
+      "limit": {
+        "default": 20,
+        "description": "Maximum jobs to return",
+        "maximum": 500,
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "offset": {
+        "default": 0,
+        "description": "Number of items to skip",
+        "minimum": 0,
+        "title": "Offset",
+        "type": "integer"
+      },
+      "status": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/JobStatus"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "pending, active or finished"
+      }
+    },
+    "title": "list_jobsArguments",
+    "type": "object"
+  },
+  "list_managed_devices": {
+    "$defs": {
+      "ConfigSync": {
+        "enum": [
+          "in_sync",
+          "out_of_sync",
+          "unknown"
+        ],
+        "title": "ConfigSync",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "config_sync": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/ConfigSync"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Filter by policy sync state with Panorama"
+      },
+      "connected": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "true = connected only, false = disconnected only",
+        "title": "Connected"
+      },
+      "device_group": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Only firewalls in this device group",
+        "title": "Device Group"
+      },
+      "limit": {
+        "default": 50,
+        "description": "Maximum number of items to return",
+        "maximum": 500,
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "model": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Exact model, e.g. PA-3420",
+        "title": "Model"
+      },
+      "offset": {
+        "default": 0,
+        "description": "Number of items to skip",
+        "minimum": 0,
+        "title": "Offset",
+        "type": "integer"
+      },
+      "sw_version": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Software version prefix, e.g. 11.1",
+        "title": "Sw Version"
+      },
+      "template_stack": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Only firewalls in this template stack",
+        "title": "Template Stack"
+      }
+    },
+    "title": "list_managed_devicesArguments",
+    "type": "object"
+  },
+  "list_templates": {
+    "$defs": {
+      "TemplateKind": {
+        "enum": [
+          "template",
+          "template_stack"
+        ],
+        "title": "TemplateKind",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "kind": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/TemplateKind"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "template or template_stack"
+      },
+      "limit": {
+        "default": 50,
+        "description": "Maximum number of items to return",
+        "maximum": 500,
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "name": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Exact template or stack name",
+        "title": "Name"
+      },
+      "offset": {
+        "default": 0,
+        "description": "Number of items to skip",
+        "minimum": 0,
+        "title": "Offset",
+        "type": "integer"
+      }
+    },
+    "title": "list_templatesArguments",
+    "type": "object"
+  },
+  "query_logs": {
+    "$defs": {
+      "LogType": {
+        "enum": [
+          "traffic",
+          "threat",
+          "url",
+          "system",
+          "config"
+        ],
+        "title": "LogType",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "action": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Action, e.g. allow, deny, drop",
+        "title": "Action"
+      },
+      "advanced_filter": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Extra PAN-OS log filter, e.g. ( zone.src eq trust )",
+        "title": "Advanced Filter"
+      },
+      "application": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Application name",
+        "title": "Application"
+      },
+      "destination": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Destination IP or CIDR",
+        "title": "Destination"
+      },
+      "device_serial": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Only logs from this firewall",
+        "title": "Device Serial"
+      },
+      "limit": {
+        "default": 100,
+        "description": "Maximum entries to return",
+        "minimum": 1,
+        "title": "Limit",
+        "type": "integer"
+      },
+      "log_type": {
+        "$ref": "#/$defs/LogType",
+        "description": "traffic, threat, url, system or config"
+      },
+      "port": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Destination port (1-65535)",
+        "title": "Port"
+      },
+      "rule": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Security rule name",
+        "title": "Rule"
+      },
+      "severity": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Threat/system severity",
+        "title": "Severity"
+      },
+      "since": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Start: relative (30m, 1h, 24h, 7d) or timestamp",
+        "title": "Since"
+      },
+      "source": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Source IP or CIDR",
+        "title": "Source"
+      },
+      "until": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "End: relative or timestamp",
+        "title": "Until"
+      }
+    },
+    "required": [
+      "log_type"
+    ],
+    "title": "query_logsArguments",
+    "type": "object"
+  },
+  "resolve_address_group": {
+    "$defs": {
+      "ConfigSource": {
+        "enum": [
+          "running",
+          "candidate"
+        ],
+        "title": "ConfigSource",
+        "type": "string"
+      }
+    },
+    "properties": {
+      "config_source": {
+        "$ref": "#/$defs/ConfigSource",
+        "default": "running",
+        "description": "running (committed) or candidate (uncommitted) config"
+      },
+      "device_serial": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Firewall serial; required to resolve dynamic group members",
+        "title": "Device Serial"
+      },
+      "max_addresses": {
+        "default": 200,
+        "description": "Maximum addresses to return",
+        "maximum": 1000,
+        "minimum": 1,
+        "title": "Max Addresses",
+        "type": "integer"
+      },
+      "name": {
+        "description": "Address group name",
+        "title": "Name",
+        "type": "string"
+      },
+      "scope": {
+        "default": "shared",
+        "description": "\"shared\" or a device-group name",
+        "title": "Scope",
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "title": "resolve_address_groupArguments",
+    "type": "object"
+  },
+  "test_security_policy_match": {
+    "properties": {
+      "application": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Application name",
+        "title": "Application"
+      },
+      "destination": {
+        "description": "Destination IP address",
+        "title": "Destination",
+        "type": "string"
+      },
+      "destination_port": {
+        "anyOf": [
+          {
+            "maximum": 65535,
+            "minimum": 1,
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Destination port",
+        "title": "Destination Port"
+      },
+      "device_serial": {
+        "description": "Firewall serial (list_managed_devices)",
+        "title": "Device Serial",
+        "type": "string"
+      },
+      "from_zone": {
+        "description": "Source zone",
+        "title": "From Zone",
+        "type": "string"
+      },
+      "protocol": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "enum": [
+              "tcp",
+              "udp",
+              "icmp"
+            ],
+            "type": "string"
+          }
+        ],
+        "description": "IP protocol name or number",
+        "title": "Protocol"
+      },
+      "source": {
+        "description": "Source IP address",
+        "title": "Source",
+        "type": "string"
+      },
+      "source_user": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "description": "Source user",
+        "title": "Source User"
+      },
+      "to_zone": {
+        "description": "Destination zone",
+        "title": "To Zone",
+        "type": "string"
+      },
+      "vsys": {
+        "default": "vsys1",
+        "description": "Virtual system",
+        "title": "Vsys",
+        "type": "string"
+      }
+    },
+    "required": [
+      "device_serial",
+      "from_zone",
+      "to_zone",
+      "source",
+      "destination",
+      "protocol"
+    ],
+    "title": "test_security_policy_matchArguments",
+    "type": "object"
+  }
+}
