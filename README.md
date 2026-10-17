@@ -12,6 +12,7 @@ rules), objects and where they are used, logs, and "which rule matches this flow
 - If you ask for a change, the assistant is told the server is read-only.
 
 The server runs locally, launched by your MCP client over stdio. It opens no network listener.
+See [How it works](#how-it-works) for the data flow and where your data goes.
 
 ## Install
 
@@ -75,6 +76,34 @@ claude mcp add panorama-demo -e PANOS_MCP_SAMPLES_SCENARIO=baseline \
 | `license-denied` | The admin role cannot read licenses |
 | `auth-failure` / `permission-denied` | Invalid key / role without XML API rights |
 | `large-estate` | 500 firewalls, 10,000 rules. Not committed: generate it first with `uv run panos-mcp-samples generate large-estate` |
+
+## How it works
+
+```
+You ──▶ MCP client ──▶ model ──(tool call)──▶ MCP client ──stdio──▶ panos-mcp ──HTTPS──▶ Panorama
+                                                                   (your machine:
+                                                                    allow-list, API key)
+You ◀── MCP client ◀── model ◀──(tool result: summary + JSON)── MCP client ◀── panos-mcp ◀── XML
+```
+
+1. The model picks a tool (e.g. `list_managed_devices` with `connected=false`).
+2. Your MCP client runs it through panos-mcp, a local process.
+3. panos-mcp checks every request against the read-only allow-list, then calls Panorama's
+   XML API over HTTPS with the key in a header.
+4. It turns the XML into structured, bounded results and returns them to the model.
+
+For policy-match tests and dynamic-group members, Panorama forwards the request to the
+firewall (`target=<serial>`); the server never connects to firewalls directly.
+
+**Where your data goes:**
+- The API key and all communication with Panorama stay on your machine.
+- **Tool results are sent to your model provider**: real firewall names, IP addresses, rules
+  and log entries.
+- Sanitizing applies only to the sample library, not to live answers. Check this against your
+  data-handling policy before using production data.
+
+Full step-by-step flow, per-tool variations and ways to limit what is shared:
+[docs/how-it-works.md](docs/how-it-works.md).
 
 ## Configuration
 
